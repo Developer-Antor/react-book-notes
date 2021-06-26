@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+:root {
+  --color-dark-1: #2b2b69;
+  --color-dark-2: #1d1d42;
+  --color-dark-3: #141432;
+  --color-button: #524eee;
+  --color-green: #6fcf97;
+  --color-yellow: #f7a509;
+  --color-red: #fb6363;
+  --color-blue: #4abef8;
+  --color-white: #ffffff;
+  --color-text-secondary: #6e6e9e;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn {
+  width: 130px;
+  height: 45px;
+  background-color: var(--color-button);
+  border-radius: 3px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.input {
+  width: 90%;
+  height: 45px;
+  border-radius: 3px;
+  border: 2px solid var(--color-dark-3);
+  font-size: 1.1rem;
+  padding: 1rem;
+
+  background-color: var(--color-dark-3);
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+}
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+body {
+  width: 100vw;
+  background-color: var(--color-dark-2);
+}
+body::-webkit-scrollbar {
+  width: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  background-color: var(--color-dark-3);
 }

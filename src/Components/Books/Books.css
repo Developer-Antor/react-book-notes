@@ -1,0 +1,110 @@
+.books {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark-2);
+}
+
+.books-header {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto 150px;
+}
+.books-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.books-header-search {
+  width: 100%;
+}
+.books-header-search input {
+  margin-left: 1rem;
+}
+.books-header-search-icon {
+  margin-left: 0;
+  pointer-events: none;
+}
+.books-header-add-book {
+  margin-right: 1rem;
+}
+.book {
+  position: relative;
+  border-radius: 3px;
+}
+.book-info-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.book-info-btn .btn,
+.btn-round {
+  width: 45px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+.btn-visit {
+  background-color: var(--color-green);
+}
+.btn-edit {
+  background-color: var(--color-yellow);
+}
+.btn-del {
+  background-color: var(--color-red);
+}
+.book form:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.books-books-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .books-books-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .book:nth-last-child(2) {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1220px) {
+  .books-books-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .book:nth-last-child(2) {
+    margin-bottom: 1rem;
+  }
+}
+
+.books-container::-webkit-scrollbar {
+  width: 0.7rem;
+}
+.books-container::-webkit-scrollbar-track {
+  background-color: var(--color-dark-3);
+}
+.books-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-1);
+}
+
+.user-info-username a,
+.bookmark-note a {
+  text-decoration: underline;
+
+  color: var(--color-blue) !important;
+}
